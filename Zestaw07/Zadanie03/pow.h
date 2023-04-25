@@ -10,7 +10,7 @@ double pow1(double x){
 
 template<>
 double pow1<1>(double x) {return x;};
-
+//
 template<>
 double pow1<0>(double x) {return 1.0;};
 

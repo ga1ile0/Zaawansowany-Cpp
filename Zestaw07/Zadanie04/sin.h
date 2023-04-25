@@ -10,7 +10,7 @@ template<int N>
 double sin(double x){
     return sin<N-1>(x) + (N % 2 ? 1 : -1) * pow1<(2 * N - 1)>(x) / factorial<2 * N - 1>::val;
 }
-
+//
 template<>
 double sin<0>(double x){
     return 0;

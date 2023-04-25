@@ -9,7 +9,7 @@ struct pow0 {
         val = N * pow0<N, M - 1>::val
     };
 };
-
+//
 template<size_t N>
 struct pow0<N, 0> {
     enum {

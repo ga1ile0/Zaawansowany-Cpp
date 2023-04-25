@@ -10,6 +10,7 @@ struct factorial{
         val = (N * factorial <N-1>::val)
     };
 };
+//
 
 template<>
 struct factorial<0>{
