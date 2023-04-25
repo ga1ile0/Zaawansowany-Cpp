@@ -5,7 +5,7 @@
 
 template<int N>
 double inner(double *a, double *b){
-    auto x = (*a) + (*b) + inner<N-1>(++a, ++b);
+    auto x = (*a) * (*b) + inner<N-1>(++a, ++b);
     return x;
 }
 
@@ -17,7 +17,7 @@ double inner<1>(double *a, double *b){
 template<size_t N, typename T = double>
 struct Inner{
     static T dot(T * a, T * b){
-        return (*a) + (*b) + Inner<N-1, T>::dot(++a, ++b);   
+        return (*a) * (*b) + Inner<N-1, T>::dot(++a, ++b);   
     }
 };
 
